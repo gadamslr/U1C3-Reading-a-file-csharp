@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.IO; // Need to ensure this namespace is used when using StreamReader / StreamWriter
 
 namespace U1C3_Reading_a_file
 {
@@ -15,12 +15,12 @@ namespace U1C3_Reading_a_file
             string myText;
 
             // Writing to a file
-            Writing(documentLocation);
+            WriteToFile(documentLocation); // Calling method - passing file location
 
             // Appending to a file
             Console.WriteLine("Add something to your file: ");
             myText = Console.ReadLine();
-            AppendToFile(documentLocation, myText);
+            AppendToFile(documentLocation, myText); // Calling method
 
             // Reading a file
             ReadAFile(documentLocation);
@@ -29,7 +29,7 @@ namespace U1C3_Reading_a_file
             Console.ReadLine();
         }
 
-        static void Writing(string docPath)
+        static void WriteToFile(string docPath)
         {
             // In this example we will use StreamWriter to write to and read from a file
             // StreamWriter is a Class that allows for writing to a file
@@ -37,21 +37,19 @@ namespace U1C3_Reading_a_file
             using (StreamWriter sw = new StreamWriter(docPath)) // Instantiate sw object to write with
             // It is best practice to use using statement so that the unmanaged resources are correctly disposed
             {
+                // Creating a sting array
                 string[] lines =
                 {
                     "First line", "Second line", "Third line"
                 };
 
-                foreach (var item in lines)
+                foreach (var item in lines) // Iterates through each element in lines array
                 {
-                    sw.Write(item + "\n");
+                    sw.Write(item + "\n"); // Escape character
                 }
 
-                sw.WriteLine("Fourth Line" + "\n");
-
-                sw.Close();
+                sw.WriteLine("Fourth Line" + "\n"); // Writing an additional line
             }
-
         }
 
         static void AppendToFile(string docPath, string newText)
@@ -60,7 +58,7 @@ namespace U1C3_Reading_a_file
 
             sw.WriteLine(newText + "\n");
 
-            sw.Close();
+            sw.Close(); // Closing the current StreamWriter object  when not using 'using'
         }
 
         static void ReadAFile(string docPath)
@@ -68,11 +66,12 @@ namespace U1C3_Reading_a_file
             string line = "";
             StreamReader sr = new StreamReader(docPath);
 
-            while ((line = sr.ReadLine()) != null)
+            while ((line = sr.ReadLine()) != null) // Iteration - Reading each line 
+                                                   // of file until there are no more 
+                                                   // lines to read
             {
-                Console.WriteLine(line);
+                Console.WriteLine(line); // Writes line to the console
             }
         }
-
     }
 }
