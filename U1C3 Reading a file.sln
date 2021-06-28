@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U1C3 Reading a file", "U1C3 Reading a file\U1C3 Reading a file.csproj", "{55AD0406-0F15-4E7B-88FB-A1D34765CD9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55AD0406-0F15-4E7B-88FB-A1D34765CD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55AD0406-0F15-4E7B-88FB-A1D34765CD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55AD0406-0F15-4E7B-88FB-A1D34765CD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55AD0406-0F15-4E7B-88FB-A1D34765CD9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2006CA20-047E-48C8-9F06-C269680C73AA}
+	EndGlobalSection
+EndGlobal
